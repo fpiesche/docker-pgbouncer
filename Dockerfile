@@ -3,7 +3,7 @@ FROM alpine:3.16.2
 # Inspiration from https://github.com/gmr/alpine-pgbouncer/blob/master/Dockerfile
 # hadolint ignore=DL3003,DL3018
 RUN \
-  apk add -U --no-cache --upgrade busybox pgbouncer==0.17.0-r0 && \
+  apk add -U --no-cache --upgrade busybox pgbouncer==1.17.0-r0 && \
   # entrypoint installs the configuration, allow to write as postgres user
   cp etc/pgbouncer.ini /etc/pgbouncer/pgbouncer.ini.example && \
   cp etc/userlist.txt /etc/pgbouncer/userlist.txt.example && \
