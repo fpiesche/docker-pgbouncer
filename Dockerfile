@@ -4,9 +4,6 @@ FROM alpine:3.16.2
 # hadolint ignore=DL3003,DL3018
 RUN \
   apk add -U --no-cache --upgrade busybox pgbouncer==1.17.0-r0 && \
-  # entrypoint installs the configuration, allow to write as postgres user
-  cp etc/pgbouncer.ini /etc/pgbouncer/pgbouncer.ini.example && \
-  cp etc/userlist.txt /etc/pgbouncer/userlist.txt.example && \
   touch /etc/pgbouncer/userlist.txt && \
   addgroup -g 70 -S postgres 2>/dev/null && \
   adduser -u 70 -S -D -H -h /var/lib/postgresql -g "Postgres user" -s /bin/sh -G postgres postgres 2>/dev/null && \
