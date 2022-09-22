@@ -8,7 +8,7 @@ RUN \
   touch /var/run/pgbouncer && \
   addgroup -g 70 -S postgres 2>/dev/null && \
   adduser -u 70 -S -D -H -h /var/lib/postgresql -g "Postgres user" -s /bin/sh -G postgres postgres 2>/dev/null && \
-  chown -R postgres /var/run/pgbouncer /etc/pgbouncer && \
+  chown -R postgres /var/run/pgbouncer /etc/pgbouncer
 
 COPY entrypoint.sh /entrypoint.sh
 USER postgres
