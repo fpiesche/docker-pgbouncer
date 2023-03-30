@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.17.3
 
 # Inspiration from https://github.com/gmr/alpine-pgbouncer/blob/master/Dockerfile
 # hadolint ignore=DL3003,DL3018
